@@ -1,0 +1,215 @@
+<div class="flex flex-col min-h-screen">
+  <header class="sticky top-10 z-50 bg-white shadow-sm mx-5 h-0">
+    <div class="bg-white container mx-auto px-4 h-16 flex justify-between items-center">
+      <div class="h-10 relative w-48">
+        <%= image_tag "/images/logo.png", alt: "Hampton North Logo", class: "object-contain absolute inset-0 w-full h-full" %>
+      </div>
+      <button class="text-gray-700 z-50" id="toggle-nav-btn">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="nav-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[55] transition-opacity duration-300 ease-in-out hidden"></div>
+
+  <div id="side-nav" class="fixed top-0 right-0 bottom-0 w-72 bg-white shadow-xl z-[60] p-6 transition-transform duration-300 ease-in-out transform translate-x-full">
+    <div class="flex justify-between items-center mb-8 pb-4 border-b border-gray-200">
+      <div class="h-8 relative w-40">
+        <%= image_tag "/images/logo.png", alt: "Hampton North Logo", class: "object-contain absolute inset-0 w-full h-full" %>
+      </div>
+      <button id="close-nav-btn" class="text-gray-500 hover:text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col space-y-4">
+      <a href="/" class="text-lg font-medium !text-gray-700 hover:text-[#5a7d70]">Home</a>
+      <a href="/" class="text-lg font-medium !text-gray-700 hover:text-[#5a7d70]">About Us</a>
+      <a href="/" class="text-lg font-medium !text-gray-700 hover:text-[#5a7d70]">Services</a>
+      <a href="/" class="text-lg font-medium !text-gray-700 hover:text-[#5a7d70]">Contact</a>
+    </nav>
+  </div>
+
+  <main class="flex-grow">
+    <section class="relative h-[80vh] text-white flex items-center overflow-hidden">
+      <%= image_tag "/images/bg.jpg", alt: "Cyber security professionals working", class: "object-cover z-20 absolute inset-0 w-full h-full" %>
+      <div class="absolute inset-0 bg-opacity-50"></div>
+      <div class="container mx-auto px-4 relative z-20">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">
+            Follow your <br />c
+            <span class="inline-block align-middle mx-1 h-12 w-12 relative">
+              <%= image_tag "/images/o.png", alt: "Compass icon", class: "object-contain absolute inset-0 w-full h-full" %>
+            </span>
+            mpass.
+          </h1>
+          <p class="text-lg md:text-xl mb-6">
+            Hampton North is the premium US based cyber security search firm.
+          </p>
+          <div class="bg-opacity-30 backdrop-blur-md p-6 rounded max-w-md text-white shadow-lg">
+            <h2 class="text-xl font-semibold mb-2">Building your security team?</h2>
+            <p class="mb-4">Hampton North connects employers with the world's top cyber talent.</p>
+            <a href="" class="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-gray-800 transition duration-300">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block bg-[#e0f0e9] px-3 py-1 text-sm font-semibold text-[#5a7d70] uppercase tracking-wider mb-4">
+              WHO WE ARE
+            </span>
+            <h2 class="text-2xl md:text-4xl text-gray-800 font-semibold mb-6">
+              Hampton North was founded to provide companies with rapid access to top-tier cybersecurity talent, delivering speed and expertise unmatched in the industry.
+            </h2>
+            <p class="text-gray-800 mb-6">
+              We understand the challenges of hiring in the cybersecurity space, which is why partnering with a firm deeply embedded in the cybersecurity community makes all the difference. Trusted by industry leaders, we are recognized as a leading voice in cybersecurity recruitment.
+            </p>
+            <a href="#" class="inline-flex items-center font-semibold group">
+              <span class="text-[#5a7d70]">About Us</span>
+              <span class="ml-2 border border-gray-400 rounded-full p-1 group-hover:border-[#5a7d70] transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 !ml-0 text-[#5a7d70] group-hover:text-[#5a7d70]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="relative h-80 rounded shadow-md overflow-hidden">
+            <%= image_tag "/images/1.jpg", alt: "Hampton North office environment", class: "object-cover rounded absolute inset-0 w-full h-full" %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-[#e0f0e9]">
+      <div class="container mx-auto px-8 text-left max-w-3xl">
+        <h2 class="text-3xl md:text-4xl text-[#4a6b60] font-bold mb-4">
+          Get our cyber hiring guide
+        </h2>
+        <p class="text-[#5a7d70] text-lg font-semibold mb-4">
+          Hiring in cybersecurity is tough—it's one of the industry's biggest challenges.
+        </p>
+        <p class="text-[#5a7d70] mb-8">
+          That's why we've created a five-part strategy guide based on the insights we've gained over the years. It's packed with actionable steps you can implement to attract and hire the best talent in the field.
+        </p>
+        <a href="/">
+          <button class="inline-flex items-center justify-between px-6 py-4 bg-[#5a7d70] text-white font-semibold hover:opacity-90 transition duration-300 rounded w-48">
+            <div class="text-left leading-tight">
+              Get the Guide
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white !ml-0">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </a>
+        <div id="open-video-modal" class="mt-10 relative w-full max-w-4xl rounded shadow-lg overflow-hidden cursor-pointer">
+          <video src="/videos/temp-1.mp4" class="block w-full h-auto rounded" autoPlay loop muted playsInline preload="metadata"></video>
+          <div class="absolute inset-0 bg-opacity-30 flex items-center justify-center rounded group-hover:bg-opacity-50 transition duration-300 z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20 text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+              <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-gray-50">
+      <div class="w-full overflow-hidden py-4">
+        <div class="flex">
+          <div class="flex flex-shrink-0 items-center justify-around animate-infinite-scroll" id="logo-container">
+            <!-- Logo images will be inserted by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-[#a8ccc0] text-white relative overflow-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <div class="swiper testimonial-swiper max-w-4xl mx-auto">
+          <div class="swiper-wrapper">
+            <!-- Testimonial slides will be inserted by JavaScript -->
+          </div>
+        </div>
+        <button class="testimonial-swiper-button-prev absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-30 rounded-full p-2 hover:bg-opacity-50 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-[#4a6b60]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+        </button>
+        <button class="testimonial-swiper-button-next absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-30 rounded-full p-2 hover:bg-opacity-50 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 !ml-0 text-[#4a6b60]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-black text-white">
+      <div class="container mx-auto px-4 text-left max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+          Get in touch with us today to see how we can help you stay secure.
+        </h2>
+        <a href="/">
+          <button class="inline-flex items-center justify-between px-10 py-6 bg-[#5a7d70] text-white font-semibold hover:opacity-90 transition duration-300 rounded w-52 mt-10">
+            <div class="text-left leading-tight">
+              Contact Us
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white !ml-0">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#e0f0e9] py-16">
+    <div class="container mx-auto px-4 text-left md:text-left">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-3xl font-bold tracking-wider text-[#4a6b60] mb-4 inline-block md:block">
+            H<span class="relative">O</span>N
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold uppercase tracking-wider mb-4 text-[#668c7a]">Connect</h3>
+          <p class="mb-2 text-[#668c7a]">
+            <a href="tel:+19595295747" class="hover:text-[#5a7d70]">+1 959 529 5747</a>
+          </p>
+          <p class="text-[#668c7a]">
+            <a href="mailto:sales@hamptonnorth.com" class="hover:text-[#5a7d70]">sales@hamptonnorth.com</a>
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-[#a8ccc0] text-sm text-gray-500 text-center">
+        © 2025 Hampton North | All Rights Reserved | <a href="#" class="text-[#668c7a] hover:text-[#5a7d70]">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="video-modal" class="fixed inset-0 flex items-center justify-center z-[100] bg-black bg-opacity-75 backdrop-blur-sm hidden" style="backdrop-filter: blur(3px);">
+    <div class="relative bg-black w-full max-w-5xl rounded-lg shadow-2xl overflow-hidden">
+      <video id="modal-video" src="https://hamptonnorth.com/wp-content/uploads/2024/08/StrategyGuide_Teaser1x1_compressed-1-1.mp4" controls class="w-full h-full rounded-lg">您的浏览器不支持 Video 标签。</video>
+      <button id="close-modal-btn" class="absolute top-3 right-3 text-white bg-black/50 p-1.5 rounded-full hover:bg-black/80 transition-colors z-[110]" aria-label="关闭视频">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5002:80"
+    volumes:
+     - .:/rails
+     - bundle_cache:/rails/vendor/bundle
+    environment:
+      - RAILS_ENV=development
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+
+volumes:
+  bundle_cache: 

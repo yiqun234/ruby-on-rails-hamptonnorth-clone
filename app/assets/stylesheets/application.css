@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Custom styles */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* Swiper progress circle animation */
+:root {
+  --progress: 1;
+}
+
+.swiper-progress-circle {
+  stroke-dasharray: 125.6;
+  stroke-dashoffset: calc(125.6 * var(--progress));
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.1s ease;
+}
+
+/* Mobile nav adjustments */
+@media (max-width: 768px) {
+  .mobile-nav-btn {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Logo animation */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+}
+
+/* Video modal */
+.modal-backdrop {
+  backdrop-filter: blur(3px);
+}
