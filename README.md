@@ -149,7 +149,7 @@ Hampton North is an American company specializing in cybersecurity talent recrui
 - Docker and Docker Compose
 - Git
 
-### Running the Project
+### Running the Project in docker
 
 1. Clone the project
    ```bash
@@ -176,3 +176,28 @@ Hampton North is an American company specializing in cybersecurity talent recrui
 - Restart Rails: `docker-compose exec web restart`
 
 ## Project Structure
+
+### Running the Project
+
+1. Clone the project
+   ```bash
+   git clone https://github.com/yiqun234/web-hamptonnorth.git
+   cd hamptonnorth
+   ```
+
+2. Run Shell
+   ```bash
+   bundle install --quiet
+   ```
+   ```bash
+   bin/rails server
+   ```
+   or
+    ```bash
+   bin/rails server -p [port]
+   ```
+
+3. Access the website
+   ```
+   http://localhost:[port]
+   ```
